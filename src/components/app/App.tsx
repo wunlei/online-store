@@ -1,9 +1,10 @@
-import ErrorBoundary from "components/error-boundary/error-boundary";
+import MainView from "src/views/MainView";
+import ErrorBoundary from "../error-boundary/error-boundary";
 
 function App() {
   return (
     <ErrorBoundary>
-      <div></div>
+      <MainView />
     </ErrorBoundary>
   );
 }

@@ -1,0 +1,152 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --gray_light: #efeef4;
+  --gray_main: #5c6970;
+  --gray_dark: #2e3438;
+  --blue_light: #3625ff;
+  --blue_dark: #0c0099;
+  --red: #d35151;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button,
+p,
+h1,
+h2,
+h3,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-xl {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.text-l {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.text-m {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+}
+
+.text-s {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+
+.text-xs {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--gray_light);
+  color: var(--gray_dark);
+}
+
+.btn {
+  background-color: var(--blue_light);
+  border-radius: 4px;
+  color: var(--white);
+  border: none;
+}
+
+/*TODO fix*/
+
+.btn-cart {
+  background-color: var(--white);
+  color: var(--blue_light);
+  fill: var(--blue_light);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px 6px 6px;
+  gap: 4px;
+  height: 100%;
+}
+
+.btn:hover {
+  background-color: var(--blue_dark);
+}
+
+.btn-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px 4px;
+  gap: 4px;
+}
+
+.badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.badge_white {
+  background-color: var(--white);
+  color: var(--gray_dark);
+  fill: var(--blue_light);
+}
+
+.text_accent {
+  color: var(--blue_light);
+}
+
+.text_stroke {
+  text-decoration-line: line-through;
+  color: var(--gray_main);
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+}
