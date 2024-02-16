@@ -1,6 +1,6 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
-import { addItemToCart, updateCartItemCount } from "store/slices/appSlice";
-import { RootState } from "store/store";
+import { addItemToCart, updateCartItemCount } from "../slices/appSlice";
+import { RootState } from "../store";
 
 export const listenerMiddleware = createListenerMiddleware();
 

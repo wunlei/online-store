@@ -1,5 +1,5 @@
-import { AppState } from "store/slices/appSlice.types";
-import { RootState } from "store/store";
+import { AppState } from "../slices/appSlice.types";
+import { RootState } from "../store";
 
 export const appSelector = (state: RootState): AppState => state.app;
 

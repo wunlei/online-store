@@ -3,7 +3,7 @@ import {
   API_Endpoints,
   BASE_URL_API,
   API_SearchParams,
-} from "constants/ApiConstants";
+} from "src/constants/ApiConstants";
 import { FetchAllProductsParams, ApiResponse, Product } from "./Api.types";
 
 export async function fetchAllProducts({

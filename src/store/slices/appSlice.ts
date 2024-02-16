@@ -4,13 +4,13 @@ import {
   getProductsFromCategory,
   getSearchQuery,
   getAllCategories,
-} from "store/thunks/apiThunks";
+} from "../thunks/apiThunks";
 import {
   AppState,
   CartProduct,
   UpdateCartItemCountPayload,
 } from "./appSlice.types";
-import { getCartFromLS } from "utils";
+import { getCartFromLS } from "src/utils";
 
 const initialState: AppState = {
   isLoading: false,

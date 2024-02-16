@@ -1,4 +1,4 @@
-import { Product } from "api/Api.types";
+import { Product } from "src/api/Api.types";
 
 export type CartProduct = {
   id: number;

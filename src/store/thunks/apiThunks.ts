@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchAllProducts, fetchProduct, fetchAllCategories, FetchCategoryPArams, fetchProductsFromCategory, FetchSearchQuery, fetchSearchQuery } from "api/Api";
-import { FetchAllProductsParams } from "api/Api.types";
+import { fetchAllProducts, fetchProduct, fetchAllCategories, FetchCategoryPArams, fetchProductsFromCategory, FetchSearchQuery, fetchSearchQuery } from "src/api/Api";
+import { FetchAllProductsParams } from "src/api/Api.types";
 
 export const getAllProducts = createAsyncThunk(
   "app/getAllProducts",
