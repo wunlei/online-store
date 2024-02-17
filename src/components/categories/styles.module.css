@@ -1,0 +1,57 @@
+.categories-container {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.categories-container-hidden {
+  display: none;
+}
+
+
+.categories-container::-webkit-scrollbar {
+  width: none; /* width of the entire scrollbar */
+}
+
+.categories-container::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.categories-container::-webkit-scrollbar-thumb {
+  background-color: transparent; /* color of the scroll thumb */
+}
+
+.categories-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 4px;
+
+  background: var(--white);
+  color: var(--gray_main);
+  flex-shrink: 0;
+}
+
+.categories-btn-active {
+  background-color: var(--blue_light);
+  color: var(--white);
+}
+
+.categories-btn-input {
+  margin: 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--white);
+  appearance: none;
+  display: none;
+}
+
+.categories-btn-input-active {
+  display: block;
+  border-radius: 50%;
+}
