@@ -14,6 +14,7 @@ import {
 import { updatePageNumber } from "src/store/slices/appSlice";
 import { useThrottle } from "src/hooks";
 import ProductCard from "src/components/product-card/ProductCard";
+import Header from "src/components/header/Header";
 
 function MainView() {
   const dispatch = useAppDispatch();
@@ -69,6 +70,7 @@ function MainView() {
 
   return (
     <main className="main">
+       <Header />
       <div>
         {products.length === 0 ? (
           <div>Ничего не найдено, попробуйте изменить запрос</div>

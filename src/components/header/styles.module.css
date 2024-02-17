@@ -1,0 +1,12 @@
+.header {
+  padding: 18px 14px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  height: 28px;
+}
