@@ -26,6 +26,7 @@ function SearchBar(props: SearchBarProps) {
 
   function handleInputFocus() {
     setSearchValue("");
+    handleFetch("");
   }
 
   function handleFetch(val: string) {
