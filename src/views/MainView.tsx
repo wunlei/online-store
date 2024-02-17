@@ -70,7 +70,7 @@ function MainView() {
 
   return (
     <main className="main">
-       <Header />
+      <Header />
       <div>
         {products.length === 0 ? (
           <div>Ничего не найдено, попробуйте изменить запрос</div>
