@@ -12,10 +12,83 @@
   background: var(--white);
   border-radius: 4px 0 0 4px;
   gap: 40px;
+  z-index: 10;
 }
 
 .cart-open {
   display: flex;
+  animation-name: slide-in;
+  animation-duration: 0.15s;
+
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.cart-closing {
+  animation-name: slide-out;
+  animation-duration: 0.15s;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(239, 238, 244, 0.85);
+}
+
+.overlay-open {
+  display: block;
+  animation-name: enter;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay-closing {
+  animation-name: exit;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .cart-header {
@@ -56,7 +129,7 @@
   gap: 8px;
 }
 
-.btn-cart_big {
+.btn-cart_footer {
   padding: 2px 8px 4px;
   display: block;
   width: 100%;
@@ -118,7 +191,7 @@
 }
 
 .cart-price {
-  color: var(--gray_main)
+  color: var(--gray_main);
 }
 
 .btn-delete {
@@ -130,13 +203,13 @@
   border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 14px;
   transform: translateX(110%);
   border: none;
-
+  fill: var(--white);
+  transition: transform 0.5s;
 }
 
 .cart-item:hover .btn-delete:hover {
-
   transform: translateX(80%);
 }
