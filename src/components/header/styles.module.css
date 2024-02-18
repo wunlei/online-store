@@ -10,3 +10,35 @@
   gap: 8px;
   height: 28px;
 }
+
+.btn-cart {
+  position: relative;
+  background-color: var(--white);
+  color: var(--blue_light);
+  fill: var(--blue_light);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px 6px 6px;
+  gap: 4px;
+  height: 100%;
+}
+
+.btn-cart:hover {
+  fill: var(--white);
+}
+
+.btn-cart-icon {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+  right: -9px;
+  top: -9px;
+
+  background: var(--white);
+  border-radius: 200px;
+  color: var(--blue_light);
+  padding: 2px;
+}
