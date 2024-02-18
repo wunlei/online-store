@@ -73,7 +73,9 @@ function MainView() {
       <Header />
       <div>
         {products.length === 0 ? (
-          <div>Ничего не найдено, попробуйте изменить запрос</div>
+          <div className="text-info text-xl">
+            Ничего не найдено, попробуйте изменить запрос
+          </div>
         ) : (
           <div className="products-container">
             {products.map((el) => (

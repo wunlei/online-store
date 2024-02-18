@@ -32,7 +32,7 @@ function Categories(props: CategoriesProps) {
 
   return (
     <div
-      className={`${classes["categories-container"]} ${props.isOpen && classes["categories-container-hidden"]}`}
+      className={`${classes["categories-container"]} ${props.isOpen ? classes["categories-container-hidden"] : ""}`}
     >
       <label
         className={`${classes["categories-btn"]} ${pickedValue === allCategoriesValue ? classes["categories-btn-active"] : ""}`}

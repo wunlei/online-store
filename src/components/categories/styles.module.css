@@ -1,40 +1,47 @@
 .categories-container {
   display: flex;
   overflow: hidden;
+  height: 100%;
+  border-radius: 4px;
   overflow-x: auto;
   scrollbar-width: none;
-  border-radius: 4px;
-  height: 100%;
 }
 
 .categories-container-hidden {
   display: none;
 }
 
-
 .categories-container::-webkit-scrollbar {
-  width: none; /* width of the entire scrollbar */
+  width: none;
 }
 
 .categories-container::-webkit-scrollbar-track {
-  background: transparent; /* color of the tracking area */
+  background: transparent;
 }
 
 .categories-container::-webkit-scrollbar-thumb {
-  background-color: transparent; /* color of the scroll thumb */
+  background-color: transparent;
 }
 
 .categories-btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-shrink: 0;
   align-items: center;
+  justify-content: center;
   padding: 6px 8px;
-  gap: 4px;
-
   background: var(--white);
   color: var(--gray_main);
-  flex-shrink: 0;
+  cursor: pointer;
+  gap: 4px;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+}
+
+.categories-btn:hover {
+  background-color: var(--blue_light);
+  color: var(--white);
 }
 
 .categories-btn-active {
@@ -43,12 +50,12 @@
 }
 
 .categories-btn-input {
-  margin: 0;
+  display: none;
   width: 6px;
   height: 6px;
-  background-color: var(--white);
+  margin: 0;
   appearance: none;
-  display: none;
+  background-color: var(--white);
 }
 
 .categories-btn-input-active {

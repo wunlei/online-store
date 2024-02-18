@@ -1,26 +1,25 @@
 .cart {
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 22px 20px 24px;
   width: 320px;
   height: 100%;
   min-height: 430px;
-  background: var(--white);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 20px 24px;
   border-radius: 4px 0 0 4px;
+  background: var(--white);
   gap: 40px;
-  z-index: 10;
 }
 
 .cart-open {
   display: flex;
-  animation-name: slide-in;
   animation-duration: 0.15s;
-
   animation-fill-mode: forwards;
+  animation-name: slide-in;
 }
 
 @keyframes slide-in {
@@ -33,8 +32,8 @@
 }
 
 .cart-closing {
-  animation-name: slide-out;
   animation-duration: 0.15s;
+  animation-name: slide-out;
 }
 
 @keyframes slide-out {
@@ -47,21 +46,20 @@
 }
 
 .overlay {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 100%;
-
   background: rgba(239, 238, 244, 0.85);
 }
 
 .overlay-open {
   display: block;
-  animation-name: enter;
   animation-duration: 0.15s;
   animation-fill-mode: forwards;
+  animation-name: enter;
 }
 
 @keyframes enter {
@@ -74,16 +72,16 @@
 }
 
 .overlay-closing {
-  animation-name: exit;
   animation-duration: 0.15s;
   animation-fill-mode: forwards;
+  animation-name: exit;
 }
 
 @keyframes exit {
   0% {
     opacity: 1;
   }
-  5% {
+  50% {
     opacity: 1;
   }
   100% {
@@ -97,42 +95,41 @@
 }
 
 .btn-cart {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px 6px 6px;
   background-color: var(--white);
   color: var(--blue_light);
   fill: var(--blue_light);
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  padding: 6px 8px 6px 6px;
   gap: 4px;
-  height: 100%;
 }
 
 .btn-cart-close {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 
 .cart-items {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   flex-grow: 1;
+  gap: 16px;
 }
 
 .cart-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 8px;
 }
 
 .btn-cart_footer {
-  padding: 2px 8px 4px;
   display: block;
   width: 100%;
+  padding: 2px 8px 4px;
 }
 
 .cart-total-count {
@@ -142,10 +139,10 @@
 /* cart item */
 
 .cart-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  position: relative;
 }
 
 .cart-item:hover .btn-delete {
@@ -153,34 +150,33 @@
 }
 
 .cart-item-img {
-  object-fit: cover;
   display: block;
   width: 60px;
   height: 60px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .cart-item-content {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
 }
 
 .cart-item-counter {
-  border-radius: 4px;
-  overflow: hidden;
   display: flex;
-  align-items: center;
-
-  background-color: var(--gray_light);
+  overflow: hidden;
   width: 72px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--gray_light);
 }
 
 .counter-btn {
-  height: 24px;
   display: block;
   width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
 }
@@ -196,17 +192,17 @@
 
 .btn-delete {
   position: absolute;
-  background-color: var(--red);
-  color: var(--white);
+  display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
-  display: flex;
   align-items: center;
   padding-left: 14px;
-  transform: translateX(110%);
   border: none;
+  border-radius: 4px;
+  background-color: var(--red);
+  color: var(--white);
   fill: var(--white);
+  transform: translateX(110%);
   transition: transform 0.5s;
 }
 

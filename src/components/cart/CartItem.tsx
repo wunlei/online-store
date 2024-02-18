@@ -4,6 +4,7 @@ import {
   removeItemFromCart,
 } from "src/store/slices/appSlice";
 import { CartProduct } from "src/store/slices/appSlice.types";
+import TrashcanIcon from 'src/assets/icons/trashcan.svg?react';
 import classes from "./styles.module.css";
 
 function CartItem(props: CartProduct) {
@@ -50,7 +51,7 @@ function CartItem(props: CartProduct) {
         className={`${classes["btn-delete"]} text-s`}
         onClick={handleDeleteItem}
       >
-        delete
+        <TrashcanIcon/>
       </button>
     </div>
   );

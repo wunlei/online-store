@@ -15,10 +15,10 @@
 }
 
 button {
-  font-family: inherit;
-  font-size: inherit;
   color: inherit;
   cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button,
@@ -36,98 +36,97 @@ ul {
 }
 
 .text-xl {
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
   letter-spacing: -0.02em;
+  line-height: 28px;
 }
 
 .text-l {
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
   letter-spacing: -0.02em;
+  line-height: 24px;
 }
 
 .text-m {
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
   letter-spacing: -0.03em;
+  line-height: 18px;
 }
 
 .text-s {
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
   letter-spacing: -0.02em;
+  line-height: 16px;
 }
 
 .text-xs {
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
   letter-spacing: -0.02em;
+  line-height: 18px;
 }
 
 html {
   font-family: "Inter", sans-serif;
 }
 
-body {
+.body {
+  position: relative;
   margin: 0;
   background-color: var(--gray_light);
   color: var(--gray_dark);
 }
 
-.btn {
-  background-color: var(--blue_light);
-  border-radius: 4px;
-  color: var(--white);
-  border: none;
+.body.hide_scroll {
+  overflow: hidden;
 }
 
-/*TODO fix*/
-
-.btn-cart {
-  background-color: var(--white);
-  color: var(--blue_light);
-  fill: var(--blue_light);
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  padding: 6px 8px 6px 6px;
-  gap: 4px;
-  height: 100%;
+.btn {
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--white);
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }
 
 .btn:hover {
   background-color: var(--blue_dark);
 }
 
-.btn-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 8px 4px;
-  gap: 4px;
+.btn_accent {
+  background-color: var(--blue_light);
+}
+
+.btn_white {
+  background-color: var(--white);
+  color: var(--blue_light);
+}
+
+.btn_white:hover {
+  background-color: var(--blue_light);
+  color: var(--white);
 }
 
 .badge {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 2px 4px;
-  gap: 4px;
   border-radius: 4px;
+  cursor: default;
+  gap: 4px;
 }
 
 .badge_white {
@@ -141,12 +140,34 @@ body {
 }
 
 .text_stroke {
-  text-decoration-line: line-through;
   color: var(--gray_main);
+  text-decoration-line: line-through;
 }
 
 .products-container {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
   justify-content: center;
+  grid-template-columns: repeat(4, 320px);
+}
+
+.text-info {
+  padding: 18px;
+}
+
+@media screen and (max-width: 1440px) {
+  .products-container {
+    grid-template-columns: repeat(3, 320px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(1, 320px);
+  }
 }

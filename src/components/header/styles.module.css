@@ -5,24 +5,23 @@
 
 .header-container {
   display: flex;
+  height: 28px;
   flex-direction: row;
   align-items: flex-start;
   gap: 8px;
-  height: 28px;
 }
 
 .btn-cart {
   position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px 6px 6px;
   background-color: var(--white);
   color: var(--blue_light);
   fill: var(--blue_light);
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  padding: 6px 8px 6px 6px;
   gap: 4px;
-  height: 100%;
 }
 
 .btn-cart:hover {
@@ -31,14 +30,12 @@
 
 .btn-cart-icon {
   position: absolute;
-
+  top: -9px;
+  right: -9px;
   width: 20px;
   height: 20px;
-  right: -9px;
-  top: -9px;
-
-  background: var(--white);
-  border-radius: 200px;
-  color: var(--blue_light);
   padding: 2px;
+  border-radius: 200px;
+  background: var(--white);
+  color: var(--blue_light);
 }

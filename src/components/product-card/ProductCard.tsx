@@ -20,6 +20,7 @@ function ProductCard(props: Product) {
   } = props;
   const dispatch = useAppDispatch();
   const isInCart = useAppSelector(cartSelector).find((el) => el.id === id);
+
   const initPrice = Math.floor((price * 100) / (100 - discountPercentage));
 
   function handleAddToCart() {
@@ -45,12 +46,14 @@ function ProductCard(props: Product) {
         </div>
         <div className={classes["card-price"]}>
           {isInCart ? (
-            <button className={`btn ${classes["btn-price"]}`}>
+            <button
+              className={`btn btn_white ${classes["btn-price"]} ${classes["btn-price-active"]}`}
+            >
               <CartIcon /> added to cart
             </button>
           ) : (
             <button
-              className={`btn ${classes["btn-price"]}`}
+              className={`btn btn_accent ${classes["btn-price"]}`}
               onClick={handleAddToCart}
             >
               <CartIcon />${price}
@@ -64,3 +67,5 @@ function ProductCard(props: Product) {
 }
 
 export default ProductCard;
+
+//TODO h1
